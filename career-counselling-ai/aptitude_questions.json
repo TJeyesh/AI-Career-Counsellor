@@ -1,0 +1,429 @@
+{
+  "interest_assessment": [
+    {
+      "id": 1,
+      "question": "I enjoy working with tools, machines, or mechanical objects",
+      "dimension": "Realistic",
+      "options": [
+        "Strongly Disagree",
+        "Disagree",
+        "Neutral",
+        "Agree",
+        "Strongly Agree"
+      ]
+    },
+    {
+      "id": 2,
+      "question": "I like solving complex problems that require deep thinking",
+      "dimension": "Investigative",
+      "options": [
+        "Strongly Disagree",
+        "Disagree",
+        "Neutral",
+        "Agree",
+        "Strongly Agree"
+      ]
+    },
+    {
+      "id": 3,
+      "question": "I prefer creative activities like drawing, writing, or designing",
+      "dimension": "Artistic",
+      "options": [
+        "Strongly Disagree",
+        "Disagree",
+        "Neutral",
+        "Agree",
+        "Strongly Agree"
+      ]
+    },
+    {
+      "id": 4,
+      "question": "I enjoy helping others and working in teams",
+      "dimension": "Social",
+      "options": [
+        "Strongly Disagree",
+        "Disagree",
+        "Neutral",
+        "Agree",
+        "Strongly Agree"
+      ]
+    },
+    {
+      "id": 5,
+      "question": "I like leading projects and making business decisions",
+      "dimension": "Enterprising",
+      "options": [
+        "Strongly Disagree",
+        "Disagree",
+        "Neutral",
+        "Agree",
+        "Strongly Agree"
+      ]
+    },
+    {
+      "id": 6,
+      "question": "I prefer working with data, files, and following established procedures",
+      "dimension": "Conventional",
+      "options": [
+        "Strongly Disagree",
+        "Disagree",
+        "Neutral",
+        "Agree",
+        "Strongly Agree"
+      ]
+    },
+    {
+      "id": 7,
+      "question": "I enjoy outdoor activities and physical work",
+      "dimension": "Realistic",
+      "options": [
+        "Strongly Disagree",
+        "Disagree",
+        "Neutral",
+        "Agree",
+        "Strongly Agree"
+      ]
+    },
+    {
+      "id": 8,
+      "question": "I like conducting experiments and analyzing results",
+      "dimension": "Investigative",
+      "options": [
+        "Strongly Disagree",
+        "Disagree",
+        "Neutral",
+        "Agree",
+        "Strongly Agree"
+      ]
+    },
+    {
+      "id": 9,
+      "question": "I enjoy expressing myself through art, music, or performance",
+      "dimension": "Artistic",
+      "options": [
+        "Strongly Disagree",
+        "Disagree",
+        "Neutral",
+        "Agree",
+        "Strongly Agree"
+      ]
+    },
+    {
+      "id": 10,
+      "question": "I like teaching or mentoring others",
+      "dimension": "Social",
+      "options": [
+        "Strongly Disagree",
+        "Disagree",
+        "Neutral",
+        "Agree",
+        "Strongly Agree"
+      ]
+    },
+    {
+      "id": 11,
+      "question": "I enjoy persuading people and negotiating deals",
+      "dimension": "Enterprising",
+      "options": [
+        "Strongly Disagree",
+        "Disagree",
+        "Neutral",
+        "Agree",
+        "Strongly Agree"
+      ]
+    },
+    {
+      "id": 12,
+      "question": "I prefer working in organized and structured environments",
+      "dimension": "Conventional",
+      "options": [
+        "Strongly Disagree",
+        "Disagree",
+        "Neutral",
+        "Agree",
+        "Strongly Agree"
+      ]
+    }
+  ],
+  "academic_strength_assessment": [
+    {
+      "id": 13,
+      "question": "Which subject do you enjoy the most?",
+      "options": [
+        "Mathematics",
+        "Science (Physics/Chemistry/Biology)",
+        "Languages (English/Hindi)",
+        "Social Studies",
+        "Arts & Crafts",
+        "Computer Science"
+      ],
+      "scoring_map": {
+        "Mathematics": [
+          "Engineering",
+          "Data Science",
+          "Commerce"
+        ],
+        "Science (Physics/Chemistry/Biology)": [
+          "Medicine",
+          "Research",
+          "Engineering"
+        ],
+        "Languages (English/Hindi)": [
+          "Journalism",
+          "Teaching",
+          "Law"
+        ],
+        "Social Studies": [
+          "Law",
+          "Civil Services",
+          "Psychology"
+        ],
+        "Arts & Crafts": [
+          "Design",
+          "Architecture",
+          "Creative Arts"
+        ],
+        "Computer Science": [
+          "IT",
+          "Software Development",
+          "Data Science"
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "question": "What type of problems do you find easiest to solve?",
+      "options": [
+        "Mathematical calculations",
+        "Scientific experiments",
+        "Creative challenges",
+        "Helping people with their problems",
+        "Business decisions",
+        "Organizing information"
+      ],
+      "scoring_map": {
+        "Mathematical calculations": [
+          "Realistic",
+          "Investigative",
+          "Conventional"
+        ],
+        "Scientific experiments": [
+          "Investigative"
+        ],
+        "Creative challenges": [
+          "Artistic"
+        ],
+        "Helping people with their problems": [
+          "Social"
+        ],
+        "Business decisions": [
+          "Enterprising"
+        ],
+        "Organizing information": [
+          "Conventional"
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "question": "How do you prefer to learn new things?",
+      "options": [
+        "Through hands-on practice",
+        "By reading and research",
+        "Through creative projects",
+        "By discussing with others",
+        "Through real-world applications",
+        "By following step-by-step instructions"
+      ],
+      "dimension_map": {
+        "Through hands-on practice": "Realistic",
+        "By reading and research": "Investigative",
+        "Through creative projects": "Artistic",
+        "By discussing with others": "Social",
+        "Through real-world applications": "Enterprising",
+        "By following step-by-step instructions": "Conventional"
+      }
+    }
+  ],
+  "personality_assessment": [
+    {
+      "id": 16,
+      "question": "In group projects, I usually:",
+      "options": [
+        "Take the lead and organize everyone",
+        "Work independently on my part",
+        "Come up with creative ideas",
+        "Help team members and ensure everyone is included",
+        "Focus on completing tasks efficiently",
+        "Analyze problems and suggest solutions"
+      ],
+      "trait_map": {
+        "Take the lead and organize everyone": "Enterprising",
+        "Work independently on my part": "Realistic",
+        "Come up with creative ideas": "Artistic",
+        "Help team members and ensure everyone is included": "Social",
+        "Focus on completing tasks efficiently": "Conventional",
+        "Analyze problems and suggest solutions": "Investigative"
+      }
+    },
+    {
+      "id": 17,
+      "question": "When facing a challenge, I:",
+      "options": [
+        "Break it down logically and analyze it",
+        "Try different creative solutions",
+        "Seek help from others",
+        "Take charge and find a quick solution",
+        "Follow proven methods",
+        "Use practical tools to fix it"
+      ],
+      "trait_map": {
+        "Break it down logically and analyze it": "Investigative",
+        "Try different creative solutions": "Artistic",
+        "Seek help from others": "Social",
+        "Take charge and find a quick solution": "Enterprising",
+        "Follow proven methods": "Conventional",
+        "Use practical tools to fix it": "Realistic"
+      }
+    },
+    {
+      "id": 18,
+      "question": "My ideal work environment would be:",
+      "options": [
+        "An office with structured processes",
+        "A laboratory or research facility",
+        "A creative studio",
+        "A community center or school",
+        "A business setting with client interaction",
+        "A workshop or outdoor setting"
+      ],
+      "trait_map": {
+        "An office with structured processes": "Conventional",
+        "A laboratory or research facility": "Investigative",
+        "A creative studio": "Artistic",
+        "A community center or school": "Social",
+        "A business setting with client interaction": "Enterprising",
+        "A workshop or outdoor setting": "Realistic"
+      }
+    }
+  ],
+  "skills_self_assessment": [
+    {
+      "id": 19,
+      "question": "Rate your confidence in mathematical problem-solving (1-5)",
+      "type": "scale",
+      "range": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": 20,
+      "question": "Rate your confidence in public speaking and communication (1-5)",
+      "type": "scale",
+      "range": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": 21,
+      "question": "Rate your confidence in creative and artistic abilities (1-5)",
+      "type": "scale",
+      "range": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": 22,
+      "question": "Rate your confidence in leadership and decision-making (1-5)",
+      "type": "scale",
+      "range": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  ],
+  "career_values_assessment": [
+    {
+      "id": 23,
+      "question": "What matters most to you in a career?",
+      "options": [
+        "High salary and financial stability",
+        "Helping others and making a difference",
+        "Creative expression and innovation",
+        "Job security and stability",
+        "Professional growth and recognition",
+        "Work-life balance"
+      ],
+      "value_map": {
+        "High salary and financial stability": [
+          "Engineering",
+          "Medicine",
+          "CA",
+          "IT"
+        ],
+        "Helping others and making a difference": [
+          "Teaching",
+          "Social Work",
+          "Healthcare",
+          "NGO"
+        ],
+        "Creative expression and innovation": [
+          "Design",
+          "Arts",
+          "Advertising",
+          "Media"
+        ],
+        "Job security and stability": [
+          "Government Jobs",
+          "Banking",
+          "Teaching"
+        ],
+        "Professional growth and recognition": [
+          "Corporate",
+          "Entrepreneurship",
+          "Research"
+        ],
+        "Work-life balance": [
+          "Teaching",
+          "Government Jobs",
+          "Remote Work"
+        ]
+      }
+    },
+    {
+      "id": 24,
+      "question": "Which of these interests you the most?",
+      "options": [
+        "Building and fixing things",
+        "Discovering how things work",
+        "Creating something new and unique",
+        "Working with people and communities",
+        "Leading projects and teams",
+        "Organizing and managing data"
+      ],
+      "interest_category": {
+        "Building and fixing things": "Realistic",
+        "Discovering how things work": "Investigative",
+        "Creating something new and unique": "Artistic",
+        "Working with people and communities": "Social",
+        "Leading projects and teams": "Enterprising",
+        "Organizing and managing data": "Conventional"
+      }
+    }
+  ]
+}

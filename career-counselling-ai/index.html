@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en" data-color-scheme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Career Counsellor - Discover Your Perfect Career Path</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Force light theme regardless of system preference -->
+    <script>
+        // Ensure the data attribute is set as early as possible
+        try {
+            document.documentElement.setAttribute('data-color-scheme', 'light');
+
+            // Prevent other scripts from forcing dark mode by blocking attempts
+            // to set data-color-scheme to 'dark'. This is a minimal guard; if
+            // you later add deliberate theme switching, remove or adjust this.
+            const origSetAttr = Document.prototype.setAttribute;
+            Document.prototype.setAttribute = function(name, value) {
+                // If someone tries to set on documentElement specifically,
+                // ignore attempts to set dark mode
+                if (this === document && name === 'data-color-scheme' && value === 'dark') {
+                    return;
+                }
+                return origSetAttr.apply(this, arguments);
+            };
+        } catch (e) {
+            // silent fallback
+            console.error('Theme lock script failed', e);
+        }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>AI Career Counsellor</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active" onclick="showSection('home')">Home</a>
+                <a href="#test" class="nav-link" onclick="showSection('test')">Take Test</a>
+                <a href="#explore" class="nav-link" onclick="showSection('explore')">Explore Careers</a>
+                <a href="#resources" class="nav-link" onclick="showSection('resources')">Resources</a>
+                <a href="#about" class="nav-link" onclick="showSection('about')">About</a>
+            </div>
+            <div class="nav-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <!-- Hero Section -->
+            <div class="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1 class="hero-title">
+                            🎯 Discover Your Perfect Career Path with AI
+                        </h1>
+                        <p class="hero-subtitle">
+                            Get personalized career guidance based on scientific aptitude testing. 
+                            Make informed decisions about your future with our AI-powered counselling system.
+                        </p>
+                        <div class="hero-buttons">
+                            <button class="btn btn--primary btn--lg" onclick="showSection('test')">
+                                <i class="fas fa-play-circle"></i> Take Aptitude Test
+                            </button>
+                            <button class="btn btn--outline btn--lg" onclick="showSection('explore')">
+                                <i class="fas fa-search"></i> Explore Career Paths
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Statistics Section -->
+            <div class="stats-section">
+                <div class="container">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number">10,000+</div>
+                            <div class="stat-label">Students Guided</div>
+                            <i class="fas fa-users stat-icon"></i>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">100+</div>
+                            <div class="stat-label">Career Paths</div>
+                            <i class="fas fa-road stat-icon"></i>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">AI-Powered</div>
+                            <div class="stat-label">Recommendations</div>
+                            <i class="fas fa-brain stat-icon"></i>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Free Access</div>
+                            <i class="fas fa-gift stat-icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Section -->
+            <div class="features-section">
+                <div class="container">
+                    <h2 class="section-title">Why Choose Our AI Career Counselling?</h2>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3>Scientific Assessment</h3>
+                            <p>Based on RIASEC model - scientifically validated career assessment used worldwide</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </div>
+                            <h3>Detailed Roadmaps</h3>
+                            <p>Step-by-step education paths, entrance exams, and skill requirements</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-rupee-sign"></i>
+                            </div>
+                            <h3>Indian Context</h3>
+                            <p>Salary ranges in ₹, Indian education system, local career opportunities</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h3>AI Chatbot Support</h3>
+                            <p>24/7 AI assistant to answer your career-related questions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Aptitude Test Section -->
+        <section id="test" class="section">
+            <div class="container">
+                <div id="testHome" class="test-home">
+                    <div class="test-intro">
+                        <h2>🧠 Career Aptitude Assessment</h2>
+                        <p class="test-description">
+                            Our comprehensive 24-question assessment is designed to understand your personality, 
+                            interests, and strengths. It takes about 10-15 minutes to complete.
+                        </p>
+                        <div class="test-features">
+                            <div class="test-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Based on RIASEC personality model</span>
+                            </div>
+                            <div class="test-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Covers interests, skills, and values</span>
+                            </div>
+                            <div class="test-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Personalized career recommendations</span>
+                            </div>
+                            <div class="test-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Detailed education roadmaps</span>
+                            </div>
+                        </div>
+                        <button class="btn btn--primary btn--lg" onclick="startTest()">
+                            <i class="fas fa-play"></i> Start Assessment
+                        </button>
+                    </div>
+                </div>
+
+                <div id="testContent" class="test-content hidden">
+                    <!-- Progress Bar -->
+                    <div class="test-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                        <div class="progress-text" id="progressText">Question 1 of 24</div>
+                    </div>
+
+                    <!-- Question Container -->
+                    <div class="question-container" id="questionContainer">
+                        <!-- Questions will be loaded here dynamically -->
+                    </div>
+
+                    <!-- Navigation Buttons -->
+                    <div class="test-navigation">
+                        <button class="btn btn--outline" id="prevBtn" onclick="previousQuestion()">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </button>
+                        <button class="btn btn--primary" id="nextBtn" onclick="nextQuestion()">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Results Section -->
+                <div id="testResults" class="test-results hidden">
+                    <!-- Results will be displayed here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Career Explorer Section -->
+        <section id="explore" class="section">
+            <div class="container">
+                <h2 class="section-title">🔍 Explore Career Options</h2>
+                <div class="explore-filters">
+                    <div class="filter-group">
+                        <label for="streamFilter">Filter by Stream:</label>
+                        <select id="streamFilter" class="form-control" onchange="filterCareers()">
+                            <option value="all">All Streams</option>
+                            <option value="science">Science</option>
+                            <option value="commerce">Commerce</option>
+                            <option value="arts_humanities">Arts &amp; Humanities</option>
+                            <option value="vocational">Vocational</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="salaryFilter">Salary Range:</label>
+                        <select id="salaryFilter" class="form-control" onchange="filterCareers()">
+                            <option value="all">All Ranges</option>
+                            <option value="high">₹8+ LPA</option>
+                            <option value="medium">₹4-8 LPA</option>
+                            <option value="entry">₹2-4 LPA</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="careerGrid" class="careers-grid">
+                    <!-- Career cards will be populated here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section id="resources" class="section">
+            <div class="container">
+                <h2 class="section-title">📚 Resources &amp; Guidance</h2>
+                
+                <!-- Scholarships -->
+                <div class="resource-category">
+                    <h3><i class="fas fa-graduation-cap"></i> Scholarships</h3>
+                    <div class="resource-grid">
+                        <div class="resource-card">
+                            <h4>National Scholarship Portal</h4>
+                            <p>Central government scholarships for students</p>
+                            <a href="https://scholarships.gov.in" target="_blank" class="btn btn--outline btn--sm">
+                                Visit Portal <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        <div class="resource-card">
+                            <h4>State Government Scholarships</h4>
+                            <p>Various state-specific scholarship schemes</p>
+                            <button class="btn btn--outline btn--sm">
+                                Check State Website <i class="fas fa-external-link-alt"></i>
+                            </button>
+                        </div>
+                        <div class="resource-card">
+                            <h4>Merit-based Scholarships</h4>
+                            <p>Offered by universities and colleges</p>
+                            <button class="btn btn--outline btn--sm">
+                                College Websites <i class="fas fa-external-link-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Entrance Exams -->
+                <div class="resource-category">
+                    <h3><i class="fas fa-pencil-alt"></i> Entrance Exam Guides</h3>
+                    <div class="exam-grid">
+                        <div class="exam-card">
+                            <h4>JEE Main/Advanced</h4>
+                            <p><strong>For:</strong> Engineering admissions</p>
+                            <p><strong>Subjects:</strong> Physics, Chemistry, Mathematics</p>
+                            <p><strong>Resources:</strong> NCERT books, coaching materials</p>
+                        </div>
+                        <div class="exam-card">
+                            <h4>NEET</h4>
+                            <p><strong>For:</strong> Medical admissions</p>
+                            <p><strong>Subjects:</strong> Physics, Chemistry, Biology</p>
+                            <p><strong>Resources:</strong> NCERT, previous papers</p>
+                        </div>
+                        <div class="exam-card">
+                            <h4>CLAT</h4>
+                            <p><strong>For:</strong> Law admissions</p>
+                            <p><strong>Subjects:</strong> English, Reasoning, GK, Legal</p>
+                            <p><strong>Resources:</strong> Law entrance books</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Section -->
+                <div class="resource-category">
+                    <h3><i class="fas fa-question-circle"></i> Frequently Asked Questions</h3>
+                    <div class="faq-container">
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">
+                                <span>How accurate is this aptitude test?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Our test is based on the scientifically-validated RIASEC model developed by psychologist John Holland. It's used worldwide for career guidance. While no test is 100% accurate, this provides valuable insights into your personality and career fit.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">
+                                <span>Can I change my stream later?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, but it's easier to choose the right stream initially. Some changes are possible (like Commerce to Arts), but switching to Science stream later is difficult because it requires PCM/PCB background.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">
+                                <span>Do I need to register to use this platform?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>No! Our platform is completely free and doesn't require registration. However, you may want to save your results for future reference.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">
+                                <span>How long does the assessment take?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>The complete assessment takes about 10-15 minutes. There are 24 questions covering different aspects of your personality, interests, and preferences.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">About Our Platform</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>🚀 Our Mission</h3>
+                        <p>
+                            To democratize career counselling and make it accessible to every secondary school student in India. 
+                            We believe that every student deserves personalized guidance to make informed career decisions, 
+                            regardless of their background or location.
+                        </p>
+                        
+                        <h3>🎯 What We Offer</h3>
+                        <ul>
+                            <li>Scientifically-backed aptitude assessment using RIASEC model</li>
+                            <li>Comprehensive career database with Indian context</li>
+                            <li>Detailed education pathways and entrance exam guidance</li>
+                            <li>AI-powered chatbot for instant career queries</li>
+                            <li>Free access to all features - no hidden costs</li>
+                        </ul>
+
+                        <h3>📞 Contact Us</h3>
+                        <div class="contact-form">
+                            <form onsubmit="submitContact(event)">
+                                <div class="form-group">
+                                    <label class="form-label">Name</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Email</label>
+                                    <input type="email" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Query</label>
+                                    <textarea class="form-control" rows="4" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn--primary">
+                                    <i class="fas fa-paper-plane"></i> Send Message
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- AI Chatbot -->
+    <div class="chatbot" id="chatbot">
+        <div class="chatbot-header" onclick="toggleChatbot()">
+            <i class="fas fa-robot"></i>
+            <span>AI Career Counsellor</span>
+            <i class="fas fa-chevron-up chatbot-toggle" id="chatbotToggle"></i>
+        </div>
+        <div class="chatbot-body" id="chatbotBody">
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="message bot-message">
+                    <div class="message-content">
+                        👋 Hi! I'm your AI Career Counsellor. Ask me anything about careers, streams, or entrance exams!
+                    </div>
+                </div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="chatInput" placeholder="Ask me about careers..." onkeypress="handleChatKeypress(event)">
+                <button onclick="sendMessage()" class="chat-send-btn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay hidden" id="loadingOverlay">
+        <div class="loading-spinner">
+            <i class="fas fa-brain fa-spin"></i>
+            <p>Analyzing your responses...</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

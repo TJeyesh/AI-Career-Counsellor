@@ -1,0 +1,315 @@
+{
+  "after_10th": {
+    "Science_Stream": {
+      "description": "For students interested in mathematics, physics, chemistry, and biology",
+      "subjects": [
+        "Physics",
+        "Chemistry",
+        "Mathematics",
+        "Biology",
+        "Computer Science"
+      ],
+      "career_options": [
+        {
+          "name": "Engineering",
+          "specializations": [
+            "Computer Science",
+            "Mechanical",
+            "Civil",
+            "Electrical",
+            "Electronics",
+            "Aerospace"
+          ],
+          "salary_range": "\u20b95-15 LPA",
+          "requirements": "PCM in 12th + JEE/State Engineering Entrance"
+        },
+        {
+          "name": "Medicine (MBBS)",
+          "specializations": [
+            "General Medicine",
+            "Surgery",
+            "Pediatrics",
+            "Cardiology"
+          ],
+          "salary_range": "\u20b98-20 LPA",
+          "requirements": "PCB in 12th + NEET"
+        },
+        {
+          "name": "Pharmacy",
+          "specializations": [
+            "Clinical Pharmacy",
+            "Industrial Pharmacy",
+            "Research"
+          ],
+          "salary_range": "\u20b94-7 LPA",
+          "requirements": "PCB/PCM in 12th"
+        },
+        {
+          "name": "Data Science",
+          "specializations": [
+            "AI/ML",
+            "Analytics",
+            "Big Data"
+          ],
+          "salary_range": "\u20b96-12 LPA",
+          "requirements": "PCM in 12th + B.Tech/B.Sc. in relevant field"
+        }
+      ]
+    },
+    "Commerce_Stream": {
+      "description": "For students interested in business, finance, and economics",
+      "subjects": [
+        "Accountancy",
+        "Business Studies",
+        "Economics",
+        "Mathematics"
+      ],
+      "career_options": [
+        {
+          "name": "Chartered Accountancy (CA)",
+          "specializations": [
+            "Auditing",
+            "Taxation",
+            "Financial Management"
+          ],
+          "salary_range": "\u20b98-13 LPA",
+          "requirements": "Commerce in 12th + CA Foundation/Intermediate/Final"
+        },
+        {
+          "name": "Company Secretary (CS)",
+          "specializations": [
+            "Corporate Law",
+            "Compliance",
+            "Governance"
+          ],
+          "salary_range": "\u20b95-11 LPA",
+          "requirements": "Commerce in 12th + CS Exams"
+        },
+        {
+          "name": "Business Management (BBA/MBA)",
+          "specializations": [
+            "Marketing",
+            "Finance",
+            "HR",
+            "Operations"
+          ],
+          "salary_range": "\u20b93-10 LPA",
+          "requirements": "Commerce in 12th + BBA + MBA (optional)"
+        }
+      ]
+    },
+    "Arts_Humanities_Stream": {
+      "description": "For students interested in social sciences, languages, and creative fields",
+      "subjects": [
+        "History",
+        "Political Science",
+        "Psychology",
+        "Sociology",
+        "Literature"
+      ],
+      "career_options": [
+        {
+          "name": "Law (LLB)",
+          "specializations": [
+            "Corporate Law",
+            "Criminal Law",
+            "Civil Law"
+          ],
+          "salary_range": "\u20b93-8 LPA",
+          "requirements": "12th + 5-year integrated LLB or BA + 3-year LLB"
+        },
+        {
+          "name": "Psychology",
+          "specializations": [
+            "Clinical Psychology",
+            "Counseling",
+            "Industrial Psychology"
+          ],
+          "salary_range": "\u20b93-7 LPA",
+          "requirements": "Arts in 12th + BA/B.Sc. Psychology + Masters"
+        },
+        {
+          "name": "Journalism & Mass Communication",
+          "specializations": [
+            "Print Media",
+            "Broadcast",
+            "Digital Media"
+          ],
+          "salary_range": "\u20b92-8 LPA",
+          "requirements": "Any stream in 12th + Journalism degree"
+        }
+      ]
+    },
+    "Vocational_Courses": {
+      "description": "Skill-based courses for immediate employment",
+      "options": [
+        {
+          "name": "ITI Courses",
+          "duration": "1-2 years",
+          "fields": [
+            "Electrician",
+            "Fitter",
+            "Welder",
+            "Computer Operator"
+          ]
+        },
+        {
+          "name": "Polytechnic Diploma",
+          "duration": "3 years",
+          "fields": [
+            "Civil",
+            "Mechanical",
+            "Electrical",
+            "Computer Science"
+          ]
+        },
+        {
+          "name": "Digital Marketing",
+          "duration": "6-12 months",
+          "salary": "\u20b93-6 LPA"
+        },
+        {
+          "name": "Animation & Multimedia",
+          "duration": "1-3 years",
+          "salary": "\u20b93-7 LPA"
+        }
+      ]
+    }
+  },
+  "personality_types_riasec": {
+    "Realistic": {
+      "description": "Practical, hands-on, work with tools and machines",
+      "suitable_careers": [
+        "Engineer",
+        "Architect",
+        "Pilot",
+        "Farmer",
+        "Mechanic",
+        "Electrician"
+      ],
+      "traits": [
+        "Practical",
+        "Independent",
+        "Physical",
+        "Technical"
+      ]
+    },
+    "Investigative": {
+      "description": "Analytical, curious, problem solvers",
+      "suitable_careers": [
+        "Scientist",
+        "Doctor",
+        "Researcher",
+        "Data Analyst",
+        "Pharmacist"
+      ],
+      "traits": [
+        "Analytical",
+        "Curious",
+        "Intellectual",
+        "Methodical"
+      ]
+    },
+    "Artistic": {
+      "description": "Creative, expressive, imaginative",
+      "suitable_careers": [
+        "Designer",
+        "Artist",
+        "Writer",
+        "Musician",
+        "Filmmaker",
+        "Fashion Designer"
+      ],
+      "traits": [
+        "Creative",
+        "Expressive",
+        "Original",
+        "Imaginative"
+      ]
+    },
+    "Social": {
+      "description": "Helpful, caring, work with people",
+      "suitable_careers": [
+        "Teacher",
+        "Counselor",
+        "Nurse",
+        "Social Worker",
+        "Psychologist"
+      ],
+      "traits": [
+        "Helpful",
+        "Empathetic",
+        "Communicative",
+        "Patient"
+      ]
+    },
+    "Enterprising": {
+      "description": "Leadership, persuasive, business-oriented",
+      "suitable_careers": [
+        "Business Owner",
+        "Manager",
+        "Lawyer",
+        "Sales Executive",
+        "Politician"
+      ],
+      "traits": [
+        "Confident",
+        "Persuasive",
+        "Ambitious",
+        "Energetic"
+      ]
+    },
+    "Conventional": {
+      "description": "Organized, detail-oriented, structured work",
+      "suitable_careers": [
+        "Accountant",
+        "Banker",
+        "Administrator",
+        "Data Entry Operator"
+      ],
+      "traits": [
+        "Organized",
+        "Detail-oriented",
+        "Methodical",
+        "Practical"
+      ]
+    }
+  },
+  "emerging_careers_2025": [
+    {
+      "name": "AI/ML Engineer",
+      "growth": "High",
+      "salary": "\u20b98-20 LPA"
+    },
+    {
+      "name": "Cybersecurity Specialist",
+      "growth": "High",
+      "salary": "\u20b96-15 LPA"
+    },
+    {
+      "name": "Cloud Computing Expert",
+      "growth": "Very High",
+      "salary": "\u20b97-18 LPA"
+    },
+    {
+      "name": "Data Scientist",
+      "growth": "Very High",
+      "salary": "\u20b96-16 LPA"
+    },
+    {
+      "name": "Digital Marketing Specialist",
+      "growth": "High",
+      "salary": "\u20b94-10 LPA"
+    },
+    {
+      "name": "UX/UI Designer",
+      "growth": "High",
+      "salary": "\u20b95-12 LPA"
+    },
+    {
+      "name": "Blockchain Developer",
+      "growth": "Medium-High",
+      "salary": "\u20b97-15 LPA"
+    }
+  ]
+}
